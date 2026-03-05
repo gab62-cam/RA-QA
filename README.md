@@ -31,10 +31,10 @@ This benchmark is designed to stress-test models under **real-world heterogeneit
 This repo is organized around two deliverables:
 
 1) **Standardized metadata**  
-Per-dataset harmonized tables/JSON exposing canonical attributes and provenance.
+Per-dataset harmonized tables exposing canonical attributes and provenance.
 
 2) **QA files**  
-Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings/subjects, structured in a JSON format style.
+Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings and subjects, structured in a JSON format style.
 
 ### QA JSON format (example)
 
