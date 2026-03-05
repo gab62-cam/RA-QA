@@ -75,6 +75,6 @@ Each QA file is a JSON **array of records**, where each record has the following
 - `split` *(str)*: Dataset split for this record. One of `{train, val, test}`.
 - `question_type` *(str)*: Question format. One of `{open-ended, multiple-choice, single-verify}`.
 - `question` *(str)*: Natural-language question text.
-- `answers_list` *(list[str])*: List of acceptable natural-language reference answers (multiple references per question).
-- `audio_filename_list` *(list[str])*: List of audio filenames associated with the `patient_id` (e.g., cough/breath/speech recordings).
+- `answers_list` *(list[str])*: List of natural-language reference answers (multiple references, one per audio recording).
+- `audio_filename_list` *(list[str])*: List of audio filenames associated with the `patient_id` (e.g., cough/breath/speech recordings or longitudinal data).
 - `attribute` *(str)*: Canonical target attribute queried by the question (e.g., `age`, `asthma`, `device`, `severity`).
