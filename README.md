@@ -36,6 +36,45 @@ Per-dataset harmonized tables/JSON exposing canonical attributes and provenance.
 2) **QA files**  
 Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings/subjects, structured in a JSON format style.
 
-<p align="center">
-  <img src="json_format.png" alt="QA JSON format" width="860"/>
-</p>
+### QA JSON format (example)
+
+Each split is stored as a single JSON file containing a **list of QA records**.  
+Below is an example entry for a **single-verify** question:
+
+```json
+[
+  {
+    "id": 0,
+    "question_id": 1,
+    "version": 1,
+    "patient_id": "01GtHP1FUbXKdWEUwApFdusuO773",
+    "split": "train",
+    "question_type": "single-verify",
+    "question": "Does the patient suffer from asthma?",
+    "answers_list": [
+      "Yes, the patient suffers from asthma.",
+      "Yes, the patient suffers from asthma.",
+    ],
+    "audio_filename_list": [
+      "20220224_01GtHP1FUbXKdWEUwApFdusuO773_breathing-shallow.wav",
+      "20220224_01GtHP1FUbXKdWEUwApFdusuO773_cough-heavy.wav",
+    ],
+    "attribute": "asthma"
+  }
+]
+```
+
+### QA JSON fields
+
+Each QA file is a JSON **array of records**, where each record has the following fields:
+
+- `id` *(int)*: Unique record index within the file.
+- `question_id` *(int)*: Identifier of the underlying question template / generation rule.
+- `version` *(int)*: Version tag for the generation pipeline/templates used to create this record.
+- `patient_id` *(str)*: Patient identifier used to group multiple recordings belonging to the same subject.
+- `split` *(str)*: Dataset split for this record. One of `{train, val, test}`.
+- `question_type` *(str)*: Question format. One of `{open-ended, multiple-choice, single-verify}`.
+- `question` *(str)*: Natural-language question text.
+- `answers_list` *(list[str])*: List of acceptable natural-language reference answers (multiple references per question).
+- `audio_filename_list` *(list[str])*: List of audio filenames associated with the `patient_id` (e.g., cough/breath/speech recordings).
+- `attribute` *(str)*: Canonical target attribute queried by the question (e.g., `age`, `asthma`, `device`, `severity`).
