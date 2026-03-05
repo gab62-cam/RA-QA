@@ -1,20 +1,16 @@
-# RA-QA: Respiratory Audio Question Answering Benchmark
+# RA-QA: A Benchmarking System for Respiratory Audio Question Answering Under Real-World Heterogeneity
 
 <p align="center">
   <img src="chatbot.png" alt="RA-QA Overview" width="860"/>
 </p>
 
 <p align="center">
-  <b>RA-QA is a large-scale benchmark for Respiratory Audio Question Answering</b><br/>
+  <b>RA-QA is a large-scale benchmark for Respiratory Audio Question Answering which covers real-world heterogeneity across modalities, devices, and question types</b><br/>
 </p>
 
-<p align="center">
-  <!-- Replace with your links -->
-  <!-- <a href="https://arxiv.org/abs/XXXX.XXXXX">Paper</a> • -->
-  <!-- <a href="https://doi.org/10.5281/zenodo.XXXXXXXX">Zenodo</a> • -->
-  <!-- <a href="#citation">Citation</a> -->
-</p>
 
+**Dataset availability.** This repository currently provides a **preview release** of RA-QA.  
+> The **full RA-QA collection** (standardized metadata, complete QA files, and the generation pipeline) will be made **publicly available upon acceptance of the RA-QA paper**.
 ---
 
 ## What is RA-QA?
