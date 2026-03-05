@@ -39,5 +39,3 @@ Per-dataset harmonized tables/JSON exposing canonical attributes and provenance.
 
 2) **QA files**  
 Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings/subjects.
-
-        test.jsonl
