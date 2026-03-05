@@ -34,4 +34,8 @@ This repo is organized around two deliverables:
 Per-dataset harmonized tables/JSON exposing canonical attributes and provenance.
 
 2) **QA files**  
-Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings/subjects.
+Generated QA pairs in multiple formats (OE/MC/SV), linked to recordings/subjects, structured in a JSON format style.
+
+<p align="center">
+  <img src="json_format.png" alt="QA JSON format" width="860"/>
+</p>
